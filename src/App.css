@@ -36,3 +36,45 @@
     transform: rotate(360deg);
   }
 }
+
+
+
+/* ______________________Button____________________ */
+
+.buttons-container {
+  display: flex;
+}
+
+.logout-btn {
+  background-color: #42bcdb;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 32px;
+  font-size: 25px;
+  margin: 10px;
+}
+
+.login-btn {
+  background-color: #db4c42;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 15px 32px;
+  font-size: 25px;
+  margin: 10px;
+}
+
+/* ______________________________________________________ */
+
+/* NavBar */
+
+@media (max-width: 768px) {
+
+  .navbar {
+
+    flex-direction: column; /* Stack items vertically on smaller screens */
+
+  }
+
+}

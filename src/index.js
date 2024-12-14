@@ -1,13 +1,65 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Nav from "./Components/Nav";
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import Signin from './Components/Signin';
+import Signup from './Components/Signup';
+import Categories from './Components/Categories';
+import Recipes from './Components/Recipes';
+import Creators from './Components/Creators';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+const queryClient = new QueryClient();
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element:
+    <div>
+      <Signin/>
+    </div> ,
+
+  }, {
+    path: "/signup",
+    element:
+    <div>
+      <Signup/>
+    </div> ,
+
+  },
+  {
+    path: "/categories",
+    element:<div>
+      <Nav/>  
+      <Categories/>
+    </div> ,
+
+  },
+  {
+  path: "/recipes",
+  element:<div>
+    <Nav/>
+    <Recipes/>
+  </div> ,
+
+},
+{
+path: "/creators",
+element:<div>
+  <Nav/>
+  <Creators/>
+</div> ,
+
+},
+])
 root.render(
   <React.StrictMode>
-    <App />
+    <QueryClientProvider client={queryClient}>
+    <RouterProvider router={router}/>
+    </QueryClientProvider>
   </React.StrictMode>
 );
 
