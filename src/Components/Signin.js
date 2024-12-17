@@ -3,6 +3,7 @@ import "./Registration.css";
 import { signin } from "../api/auth";
 // import { useMutation } from "@tanstack/react-query";
 import { useNavigate } from "react-router";
+import Logo from '../assests/Logo.PNG';
 
 const Signin = () => {
   const [query, setQuery] = useState("Signin");
@@ -44,10 +45,14 @@ const Signin = () => {
 
   return (
     <div className="background">
-      {/* <img className="image" src={image} alt="" /> */}
-   <div className="container" style={{width:"100%",display:"flex",flexDirection:"column" ,justifyContent:"center",alignItems:"center", marginTop:"5%"}} >  
+    <div className="container" style={{width:"100%",display:"flex",justifyContent:"center",  marginTop:"5%"}} > 
+    
+      <div className="logo-image-div">
+    <img style={{display:"flex", width:320, marginRight:200,alignContent:"center" }} src={Logo} alt="logo" />
+    <h1 className="logo-name">YumHub</h1>
+    </div>
 
-      <div style={{justifyContent:"start"}}>
+      <div style={{ alignContent:"center" , alignItems:"center"}}>
       <div className="text">Sign in</div>
       <form onSubmit={handleFormSubmit}>
         <div className="input">
@@ -111,70 +116,6 @@ const Signin = () => {
       </form>
    
 </div>
-    {/* signup */}
-
-
-   
-     {/* <div className='header'> */}
-     {/* <div className="text">{query}</div>
-     <form onSubmit={handleFormSubmit1}>
-       {/* </div> */}
-       {/* <div className='inputs'> */}
-       {/* <div className="input">
-         <input
-           onChange={(e) => {
-             setQuery(e.target.value);
-           }}
-           type="text"
-           name="username"
-           placeholder="usename"
-          
-         ></input>
-       </div>
-
-       <div className="input">
-         {/* <img src={password_icon} alt="" /> */}
-         {/* <input
-           onChange={(e) => {
-             setQuery(e.target.value);
-           }}
-           type="password"
-           name="password"
-           placeholder="Password"
-         ></input>
-       </div>
-       {/* </div> */}
-       {/* {query === "Sign Up" ? (
-         <div
-        
-           onClick={() => {
-             setQuery("Signin");
-           }}
-         > */}
-           {/* {" "}
-           I have an account, <span>Signin !</span>
-         </div>
-       ) : (
-         <div
-       
-           onClick={() => {
-             setQuery("Sign Up");
-           }}
-         >
-           I don't have an account, <span>Sign Up!</span>
-         </div>
-       )} */}
-     
-         {/* <button
-           className={query === "Signin" ? "submit gray" : "submit"}
-           onClick={() => {}}
-         >
-           {query}{" "}
-         </button>
-  
-     </form>  */}
-     
-   
     </div> 
    </div>
   );

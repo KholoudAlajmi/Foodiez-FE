@@ -1,14 +1,12 @@
 .background {
   background-color: #f88520;
   display: flex;
-  /* align-items: center; */
   height: 100vh;
-  /* align-content:center ; */
+
 }
 
 .container {
   display: flex;
-  /* flex-direction: column; */
   text-align: center;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
@@ -30,18 +28,8 @@
 
 }
 
-/* inputs */
 
-/* .inputs{
-    margin-top: 1000px;
-    display: flex;
-    flex-direction: column;
-    gap: 25px;
-    color: #a71c1c;
-    align-items: center;
-} */
-
-/*input classname*/
+/*input */
 
 .input {
   display: flex;
@@ -50,17 +38,14 @@
   margin: 10px;
   width: 270px;
   height: 40px;
-  /* padding-left: 5%; */
   background: #f5f5f5;
   border-radius: 50px;
 }
 
-/* .input-img{
-    margin: 0px 30px;
-} */
+
 
 .input input {
-  height: 50px;
+
   width: 250px;
   background: transparent;
   border: none;
@@ -83,12 +68,6 @@
     cursor: pointer;
 } */
 
-/* .submit-container{
-    display: flex;
-    gap:30px;
-    margin:60px auto;
-    color: rgb(193, 30, 30);
-} */
 
 /* button */
 .submit {
@@ -109,17 +88,6 @@
   height: 30px;
 }
 
-/* .gray{
-    background: rgb(0, 0, 0)7;
-    color: #bdbcbc;
-    width: 220px;
-    height: 30px ;
-    align-items: center;
-    text-align: center;
-    justify-content: center; 
-   border: none;
-    text-align: center;
-} */
 
 /* .image {
   align-items: end;
@@ -134,23 +102,11 @@
 .navbar {
   display: flex;  
   flex-direction: row;
-  /* justify-content:flex-start;
-  align-items:start;
-  margin-top: 60px;
-  position: fixed;
-  margin: 100px;
-  width: 70px;
-  height: 30px;
-  background: none;
-  align-content: space-around;
-  padding: 10px;
-  */
   position: fixed;
   padding-top: 19px;
   font-size: medium;
   font-weight: 700;
-  margin-left: 350px;
-  
+  margin-left: 100px;
 
 }
 
@@ -165,7 +121,39 @@
   font-size: 14px;
   font-weight: 500;
   border: none;
-  margin-left:250px;
+  margin-left:200px;
   flex-direction: row;
   align-content: space-around;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Great+Vibes&display=swap');
+
+.logo-name{
+ font-family: "Great Vibes", cursive;
+ color: #f88520;
+ width: fit-content;
+ margin-left: 96px;
+}
+
+.logo-image-div{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  margin-left: 10px;
+  width: fit-content;
+}
+
+.logo-nav-name{
+  font-family: "Great Vibes", cursive;
+  color: white;
+  margin-top: auto;
+  margin-right: 150px;
+
+}
+
+.logo-nav-slogan{
+  font-family: "Great Vibes", cursive;
+  color: white;
+  text-align: center;
+  font-size: 20px;
 }

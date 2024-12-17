@@ -5,10 +5,16 @@ import { NavLink } from "react-router-dom";
 const Nav = () => {
   const [user, setUser] = useState();
   return (
+
     <div>
+
       <nav style={{flexDirection:"row" , justifyItems:"flex-start"}}>
-        
+       
         <div className="navbar">
+
+        <h1 className="logo-nav-name">YumHub</h1>
+        
+
           <div>
           <NavLink
            style={({ isActive }) => {
