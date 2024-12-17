@@ -6,20 +6,25 @@ import Signup from './Components/Signup';
 import Recipes from './Components/Recipes';
 import Creators from './Components/Creators';
 import Categories from './Components/Categories';
+import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 
 
 function App() {
   return (
-    <div className="App"> 
-    <Nav/>
-    <Signin/>
-    <Signup/>
-    <Recipes/>
-    <Creators/>
-    <Categories/>
+    <Router>
+      <Routes> 
+        <Route path='/' element={<Signin/>}></Route>
+        <Route path="/signup" element={<Signup/>}></Route>
+        <Route path="/categories" element={<Categories/>}></Route>
+        <Route path='/recipes' element={<Recipes/>}></Route>
+        <Route path='/creators' element={<Creators/>}></Route>
+        
     
-    </div>
+    
+
+    </Routes>
+    </Router>
   );
 }
 

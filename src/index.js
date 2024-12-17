@@ -16,7 +16,7 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 const queryClient = new QueryClient();
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: "/", 
     element:
     <div>
       <Signin/>
@@ -32,26 +32,19 @@ const router = createBrowserRouter([
   },
   {
     path: "/categories",
-    element:<div>
-      <Nav/>  
-      <Categories/>
-    </div> ,
+    element:
+      <Categories/>,
 
   },
   {
   path: "/recipes",
-  element:<div>
-    <Nav/>
-    <Recipes/>
-  </div> ,
+  element:
+    <Recipes/> ,
 
 },
 {
 path: "/creators",
-element:<div>
-  <Nav/>
-  <Creators/>
-</div> ,
+element: <Creators/>,
 
 },
 ])
